@@ -1,0 +1,3 @@
+Question3-write query that shows department Name and total number of employee in each department.
+
+select d.Dname as DepartmentName,count(*) as NumberOfEmployee from department d inner join employe e on e.Depno=d.Depno group by d.Dname

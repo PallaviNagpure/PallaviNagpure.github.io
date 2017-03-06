@@ -1,0 +1,26 @@
+
+Question2:-Function to find maximum no of words in a sentences.Given text can be divided it at dots,exclamation,question mark.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("please enter sentences");
+
+            string s= Console.ReadLine();
+            var items = s.Split(new char[] { '.', '?', '!' }, StringSplitOptions.RemoveEmptyEntries);
+            int count = items.Select(k => k.Trim()).Max(k => k.Split(' ').Length);
+            Console.WriteLine("Maximum number of words in a Sentence are "+count);
+            Console.ReadKey();
+        }
+    }
+}
